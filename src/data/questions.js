@@ -1650,17 +1650,34 @@ export const questions = [
   },
   {
     id: "staar005",
-    category: "fractions",
+    category: "algebra",
     difficulty: "medium",
-    question: "At a fruit stand, 2/3 of the apples are red. Of the red apples, 3/4 of them are sweet. What fraction of all the apples at the fruit stand are red and sweet?",
+    imageDescription: "A table showing the relationship between x and y values:\nx: 4, 8, 16, 32\ny: 14, 18, 26, 42",
+    question: "Which statement about the relationship between x and y is true?",
     choices: [
-      { id: "a", text: "5/7", correct: false },
-      { id: "b", text: "1/2", correct: true },
-      { id: "c", text: "5/12", correct: false },
-      { id: "d", text: "6/7", correct: false }
+      {
+        id: "a",
+        text: "It is a multiplicative pattern because each x-value is a multiple of 4.",
+        correct: false
+      },
+      {
+        id: "b",
+        text: "It is a multiplicative pattern because each y-value is a multiple of 2.",
+        correct: false
+      },
+      {
+        id: "c",
+        text: "It is an additive pattern because each y-value can be determined by finding the sum of the previous x- and y-values.",
+        correct: false
+      },
+      {
+        id: "d",
+        text: "It is an additive pattern because each y-value is determined by adding 10 to the corresponding x-value.",
+        correct: true
+      }
     ],
-    explanation: "Multiply the fractions: 2/3 × 3/4 = 6/12 = 1/2. Half of all the apples are red and sweet.",
-    hints: ["Multiply the two fractions", "Remember to simplify your answer"]
+    explanation: "Looking at the table: 4 + 10 = 14, 8 + 10 = 18, 16 + 10 = 26, 32 + 10 = 42. Each y-value equals the x-value plus 10, making this an additive pattern with the rule y = x + 10.",
+    hints: ["Check if y = x + 10 works for all rows", "Compare each x and y pair"]
   },
   {
     id: "staar007",
