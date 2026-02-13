@@ -1680,6 +1680,24 @@ export const questions = [
     hints: ["Check if y = x + 10 works for all rows", "Compare each x and y pair"]
   },
   {
+    id: "staar006",
+    category: "geometry",
+    difficulty: "medium",
+    multiSelect: true,
+    correctCount: "TWO",
+    imageDescription: "Five rectangular prisms are shown with labeled dimensions:\n1. Length: 24 in, Width: 8 in, Height: 2 in\n2. Length: 4 in, Width: 8 in, Height: 2 in\n3. Length: 4 in, Width: 4 in, Height: 4 in\n4. Length: 42 in, Width: 20 in, Height: 2 in\n5. Length: 32 in, Width: 22 in, Height: 10 in",
+    question: "Which rectangular prisms have a volume of 64 cubic inches?",
+    choices: [
+      { id: "a", text: "1", correct: false },
+      { id: "b", text: "2", correct: true },
+      { id: "c", text: "3", correct: true },
+      { id: "d", text: "4", correct: false },
+      { id: "e", text: "5", correct: false }
+    ],
+    explanation: "Calculate the volume (V = length × width × height) for each prism:\n1. 24 × 8 × 2 = 384 cubic inches\n2. 4 × 8 × 2 = 64 cubic inches ✓\n3. 4 × 4 × 4 = 64 cubic inches ✓\n4. 42 × 20 × 2 = 1,680 cubic inches\n5. 32 × 22 × 10 = 7,040 cubic inches\nPrisms 2 and 3 both have a volume of 64 cubic inches.",
+    hints: ["Use the formula V = length × width × height", "Calculate volume for each prism"]
+  },
+  {
     id: "staar007",
     category: "numbers",
     difficulty: "medium",
