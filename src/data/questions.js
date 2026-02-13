@@ -2208,6 +2208,21 @@ export const questions = [
     ],
     explanation: "Add the mixed numbers: 2 1/4 + 1 3/4 = 3 4/4 = 4 cups",
     hints: ["Add the whole numbers first: 2 + 1 = 3", "Then add the fractions: 1/4 + 3/4 = 4/4 = 1"]
+  },
+  {
+    id: "staar032",
+    category: "geometry",
+    difficulty: "medium",
+    imageDescription: "Venn diagram with two overlapping circles. Left circle labeled 'Right Triangles', right circle labeled 'Isosceles Triangles'. The intersection (overlapping area) is shaded. Four triangle diagrams are shown as answer choices:\nA: Scalene obtuse triangle (no equal sides, one obtuse angle)\nB: Right isosceles triangle (right angle marker shown, two equal sides marked)\nC: Scalene acute triangle (no equal sides, all acute angles)\nD: Isosceles acute triangle (two equal sides marked, all acute angles)",
+    question: "The Venn diagram shows categories for classifying triangles. Which triangle should be placed in the shaded part of the diagram?",
+    choices: [
+      { id: "a", text: "Triangle A (scalene obtuse triangle)", correct: false },
+      { id: "b", text: "Triangle B (right isosceles triangle)", correct: true },
+      { id: "c", text: "Triangle C (scalene acute triangle)", correct: false },
+      { id: "d", text: "Triangle D (isosceles acute triangle)", correct: false }
+    ],
+    explanation: "The shaded area represents triangles that are BOTH right triangles AND isosceles triangles. Only Triangle B is a right isosceles triangle - it has a 90-degree angle (making it a right triangle) and two equal sides (making it an isosceles triangle). Triangle A is obtuse and scalene. Triangle C is acute and scalene. Triangle D is isosceles but not a right triangle.",
+    hints: ["The shaded area means the triangle must fit BOTH categories", "Look for a triangle with a right angle AND two equal sides"]
   }
 ];
 
