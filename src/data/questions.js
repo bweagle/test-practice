@@ -1769,6 +1769,21 @@ export const questions = [
     hints: ["Look at the relationship between input and output", "What operation turns 1 into 6?"]
   },
   {
+    id: "staar012",
+    category: "geometry",
+    difficulty: "medium",
+    imageDescription: "A rectangular prism with dimensions labeled:\n- Length: 8 cm\n- Width: 5 cm\n- Height: 9 cm\nThe prism is shown in 3D with dashed lines indicating the hidden edges.",
+    question: "The prism will be completely filled with unit cubes that each have a volume of 1 cubic centimeter. How many of these cubes are needed to fill the prism?",
+    choices: [
+      { id: "a", text: "360", correct: true },
+      { id: "b", text: "22", correct: false },
+      { id: "c", text: "117", correct: false },
+      { id: "d", text: "44", correct: false }
+    ],
+    explanation: "To find how many unit cubes (1 cubic cm each) fit in the prism, calculate the volume: Volume = length × width × height = 8 × 5 × 9 = 360 cubic centimeters. Therefore, 360 unit cubes are needed.",
+    hints: ["Calculate the volume: V = length × width × height", "Each unit cube has volume 1 cubic cm"]
+  },
+  {
     id: "staar013",
     category: "geometry",
     difficulty: "medium",
