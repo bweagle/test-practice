@@ -829,15 +829,15 @@ export const questions = [
     id: "d007",
     category: "data",
     difficulty: "medium",
-    question: "A tally chart shows: |||| |||| |||. How many items?",
+    question: "A tally chart shows two groups of 5 tallies (with the diagonal line through them) and 3 single tallies. How many items total?",
     choices: [
       { id: "a", text: "12", correct: false },
       { id: "b", text: "13", correct: true },
       { id: "c", text: "14", correct: false },
       { id: "d", text: "15", correct: false }
     ],
-    explanation: "Each |||| = 5. So 5 + 5 + 3 = 13",
-    hints: ["|||| represents 5", "Count: 5 + 5 + 3"]
+    explanation: "Two complete groups of 5 = 10, plus 3 more = 13 total",
+    hints: ["Each complete group with diagonal line = 5", "Count: 5 + 5 + 3"]
   },
   {
     id: "d008",
@@ -1485,15 +1485,15 @@ export const questions = [
     id: "d009",
     category: "data",
     difficulty: "easy",
-    question: "A tally chart shows |||| |||| ||. How many tallies?",
+    question: "A tally chart shows two complete groups of 5 tallies (with diagonal lines) and 2 single tallies. How many tallies total?",
     choices: [
       { id: "a", text: "11", correct: false },
       { id: "b", text: "12", correct: true },
       { id: "c", text: "13", correct: false },
       { id: "d", text: "10", correct: false }
     ],
-    explanation: "5 + 5 + 2 = 12 tallies",
-    hints: ["Each |||| = 5", "5 + 5 + 2"]
+    explanation: "Two complete groups of 5 = 10, plus 2 more = 12 tallies",
+    hints: ["Each complete group = 5", "Count: 5 + 5 + 2"]
   },
   {
     id: "d010",
