@@ -117,7 +117,7 @@ export function DropdownQuestion({
       {question.image && (
         <div style={{ margin: '1rem 0', textAlign: 'center' }}>
           <img
-            src={question.image}
+            src={import.meta.env.BASE_URL + question.image.replace(/^\//, '')}
             alt="Question visual"
             style={{
               maxWidth: '100%',
