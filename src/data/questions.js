@@ -1614,8 +1614,8 @@ export const questions = [
   },
   {
     id: "staar004",
-    category:
-    image: "/images/page-05.png", "data",
+    category: "data",
+    image: "/images/page-05.png",
     difficulty: "medium",
     questionType: "dropdown",
     imageDescription: "Cecelia collected data on the amount of time, in minutes, she spent doing homework each day for two weeks. The complete data set is: 10, 10, 10, 12, 14, 14, 14, 16, 16, 18, 18, 18, 18, 20, 20. Cecelia began making a dot plot to display her data, but the dot plot shown is incomplete - it has only 13 dots plotted.",
@@ -1651,8 +1651,8 @@ export const questions = [
   },
   {
     id: "staar005",
-    category:
-    image: "/images/page-06.png", "algebra",
+    category: "algebra",
+    image: "/images/page-06.png",
     difficulty: "medium",
     imageDescription: "A table showing the relationship between x and y values:\nx: 4, 8, 16, 32\ny: 14, 18, 26, 42",
     question: "Which statement about the relationship between x and y is true?",
@@ -1683,8 +1683,8 @@ export const questions = [
   },
   {
     id: "staar006",
-    category:
-    image: "/images/page-07.png", "geometry",
+    category: "geometry",
+    image: "/images/page-07.png",
     difficulty: "medium",
     multiSelect: true,
     correctCount: "TWO",
@@ -1716,8 +1716,8 @@ export const questions = [
   },
   {
     id: "staar008",
-    category:
-    image: "/images/page-09.png", "data",
+    category: "data",
+    image: "/images/page-09.png",
     difficulty: "easy",
     imageDescription: "A bar graph titled 'Votes Received' shows three students running for class president:\n- Casey: 15 votes\n- Blake: 10 votes\n- Shanita: 10 votes\nThe y-axis shows 'Number of Votes' from 0 to 20, and the x-axis shows 'Student' names.",
     question: "What fraction of the total votes received were for Casey?",
@@ -1774,8 +1774,8 @@ export const questions = [
   },
   {
     id: "staar012",
-    category:
-    image: "/images/page-13.png", "geometry",
+    category: "geometry",
+    image: "/images/page-13.png",
     difficulty: "medium",
     imageDescription: "A rectangular prism with dimensions labeled:\n- Length: 8 cm\n- Width: 5 cm\n- Height: 9 cm\nThe prism is shown in 3D with dashed lines indicating the hidden edges.",
     question: "The prism will be completely filled with unit cubes that each have a volume of 1 cubic centimeter. How many of these cubes are needed to fill the prism?",
@@ -1818,8 +1818,8 @@ export const questions = [
   },
   {
     id: "staar015",
-    category:
-    image: "/images/page-16.png", "algebra",
+    category: "algebra",
+    image: "/images/page-16.png",
     difficulty: "medium",
     multiSelect: true,
     correctCount: "TWO",
@@ -1949,8 +1949,8 @@ export const questions = [
   },
   {
     id: "staar022",
-    category:
-    image: "/images/page-23.png", "fractions",
+    category: "fractions",
+    image: "/images/page-23.png",
     difficulty: "medium",
     imageDescription: "A hundredths grid (10×10) with 32 squares shaded, representing 0.32. The shaded area is divided into 4 equal groups of 8 squares each. A key shows that a fully shaded grid = 1 whole.",
     question: "The model shown represents a division equation. Which equation could be represented by the model?",
@@ -2035,8 +2035,8 @@ export const questions = [
   },
   {
     id: "staar030",
-    category:
-    image: "/images/page-29.png", "data",
+    category: "data",
+    image: "/images/page-29.png",
     difficulty: "medium",
     imageDescription: "Stem-and-Leaf Plot: Books Checked Out on Saturday\n\nStem | Leaf\n  1  | 0 5 6\n  2  | 1 4 4\n  3  | 2 5\n\nKey: 2|1 means 21 books\n\nData values represented:\n- 10, 15, 16 (from stem 1)\n- 21, 24, 24 (from stem 2)\n- 32, 35 (from stem 3)",
     question: "This stem-and-leaf plot shows the number of books that were checked out of a library each hour on Saturday. What is the total number of books that were checked out on Saturday?",
@@ -2079,8 +2079,8 @@ export const questions = [
   },
   {
     id: "staar034",
-    category:
-    image: "/images/page-30.png", "geometry",
+    category: "geometry",
+    image: "/images/page-30.png",
     difficulty: "easy",
     imageDescription: "A coordinate grid is shown with x-axis from 0 to 9 and y-axis from 0 to 9. The grid has horizontal and vertical lines forming squares. The axes are labeled with 'x' on the horizontal axis and 'y' on the vertical axis.",
     question: "A coordinate grid is shown. Which term best describes the point where the horizontal axis intersects the vertical axis?",
@@ -2221,8 +2221,8 @@ export const questions = [
   },
   {
     id: "staar032",
-    category:
-    image: "/images/page-30.png", "geometry",
+    category: "geometry",
+    image: "/images/page-30.png",
     difficulty: "medium",
     imageDescription: "Venn diagram with two overlapping circles. Left circle labeled 'Right Triangles', right circle labeled 'Isosceles Triangles'. The intersection (overlapping area) is shaded. Four triangle diagrams are shown as answer choices:\nA: Scalene obtuse triangle (no equal sides, one obtuse angle)\nB: Right isosceles triangle (right angle marker shown, two equal sides marked)\nC: Scalene acute triangle (no equal sides, all acute angles)\nD: Isosceles acute triangle (two equal sides marked, all acute angles)",
     question: "The Venn diagram shows categories for classifying triangles. Which triangle should be placed in the shaded part of the diagram?",
