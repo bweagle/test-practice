@@ -151,8 +151,12 @@ export function ResultsPage({ results, onTakeAnother, onPracticeFocus }) {
             Review Missed Questions ({results.incorrectQuestions.length})
           </h2>
           {results.incorrectQuestions.map((item, index) => {
-            const userChoice = item.question.choices.find(c => c.id === item.userAnswer);
-            const correctChoice = item.question.choices.find(c => c.id === item.correctAnswer);
+            const isMultiSelect = item.question.multiSelect || false;
+            const userAnswers = Array.isArray(item.userAnswer) ? item.userAnswer : (item.userAnswer ? [item.userAnswer] : []);
+            const correctAnswers = Array.isArray(item.correctAnswer) ? item.correctAnswer : [item.correctAnswer];
+
+            const userChoices = item.question.choices.filter(c => userAnswers.includes(c.id));
+            const correctChoices = item.question.choices.filter(c => correctAnswers.includes(c.id));
 
             return (
               <div key={item.question.id} style={{ marginBottom: '2rem', padding: '1.5rem', backgroundColor: '#fff', border: '2px solid #dee2e6', borderRadius: '8px' }}>
@@ -160,20 +164,24 @@ export function ResultsPage({ results, onTakeAnother, onPracticeFocus }) {
                   Question {index + 1}: {item.question.question}
                 </div>
 
-                {item.userAnswer && (
+                {userAnswers.length > 0 && (
                   <div style={{ marginBottom: '0.5rem', color: '#dc3545' }}>
-                    ✗ Your answer: {userChoice?.text}
+                    ✗ Your answer{isMultiSelect && userAnswers.length > 1 ? 's' : ''}: {
+                      userChoices.map(c => c.text).join(', ') || 'None'
+                    }
                   </div>
                 )}
 
-                {!item.userAnswer && (
+                {userAnswers.length === 0 && (
                   <div style={{ marginBottom: '0.5rem', color: '#ffc107' }}>
                     ⚠ Not answered
                   </div>
                 )}
 
                 <div style={{ marginBottom: '1rem', color: '#28a745', fontWeight: '600' }}>
-                  ✓ Correct answer: {correctChoice?.text}
+                  ✓ Correct answer{isMultiSelect && correctAnswers.length > 1 ? 's' : ''}: {
+                    correctChoices.map(c => c.text).join(', ')
+                  }
                 </div>
 
                 <div className="staar-explanation">

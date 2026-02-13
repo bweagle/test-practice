@@ -73,7 +73,7 @@ export function useTestSession(allQuestions) {
   /**
    * Submit an answer for the current question
    * @param {string} questionId - Question ID
-   * @param {string} answerId - Selected answer ID
+   * @param {string} answerId - Selected answer ID (for multi-select, this toggles the answer)
    */
   const submitAnswer = useCallback((questionId, answerId) => {
     if (!session) return;
@@ -81,16 +81,42 @@ export function useTestSession(allQuestions) {
     const question = session.questions.find(q => q.id === questionId);
     if (!question) return;
 
-    const correctAnswer = question.choices.find(c => c.correct);
-    const isCorrect = correctAnswer && correctAnswer.id === answerId;
     const timeSpent = getTimeSpent();
+    const isMultiSelect = question.multiSelect || false;
+
+    let selectedAnswer;
+    let isCorrect;
+
+    if (isMultiSelect) {
+      // For multi-select, toggle the answer in the array
+      const currentAnswers = session.answers[questionId]?.selectedAnswer || [];
+      const answersArray = Array.isArray(currentAnswers) ? currentAnswers : [];
+
+      if (answersArray.includes(answerId)) {
+        // Remove answer if already selected
+        selectedAnswer = answersArray.filter(id => id !== answerId);
+      } else {
+        // Add answer if not selected
+        selectedAnswer = [...answersArray, answerId];
+      }
+
+      // Check if all correct answers are selected and no incorrect ones
+      const correctAnswers = question.choices.filter(c => c.correct).map(c => c.id).sort();
+      const selectedSorted = [...selectedAnswer].sort();
+      isCorrect = JSON.stringify(correctAnswers) === JSON.stringify(selectedSorted);
+    } else {
+      // Single select - works as before
+      selectedAnswer = answerId;
+      const correctAnswer = question.choices.find(c => c.correct);
+      isCorrect = correctAnswer && correctAnswer.id === answerId;
+    }
 
     setSession(prev => ({
       ...prev,
       answers: {
         ...prev.answers,
         [questionId]: {
-          selectedAnswer: answerId,
+          selectedAnswer,
           isCorrect,
           timeSpent
         }

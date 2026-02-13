@@ -261,11 +261,18 @@ export function generateResults(session) {
       const answer = session.answers[q.id];
       return !answer || !answer.isCorrect;
     })
-    .map(q => ({
-      question: q,
-      userAnswer: session.answers[q.id]?.selectedAnswer || null,
-      correctAnswer: q.choices.find(c => c.correct)?.id || null
-    }));
+    .map(q => {
+      const isMultiSelect = q.multiSelect || false;
+      const correctAnswer = isMultiSelect
+        ? q.choices.filter(c => c.correct).map(c => c.id)
+        : q.choices.find(c => c.correct)?.id || null;
+
+      return {
+        question: q,
+        userAnswer: session.answers[q.id]?.selectedAnswer || null,
+        correctAnswer
+      };
+    });
 
   return {
     sessionId: session.sessionId,

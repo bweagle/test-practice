@@ -1582,6 +1582,23 @@ export const questions = [
     hints: ["Multiply 1.25 by 6", "Think of 1.25 as 1 and 1/4"]
   },
   {
+    id: "staar002",
+    category: "numbers",
+    difficulty: "medium",
+    question: "Which numbers have a value less than 1.069?",
+    multiSelect: true,
+    correctCount: "TWO",
+    choices: [
+      { id: "a", text: "1.52", correct: false },
+      { id: "b", text: "1.003", correct: true },
+      { id: "c", text: "1.052", correct: true },
+      { id: "d", text: "1.96", correct: false },
+      { id: "e", text: "1.7", correct: false }
+    ],
+    explanation: "Compare each number to 1.069: 1.003 < 1.069 and 1.052 < 1.069. All other numbers (1.52, 1.96, 1.7) are greater than 1.069.",
+    hints: ["Compare the tenths place first", "Then compare hundredths if needed"]
+  },
+  {
     id: "staar003",
     category: "measurement",
     difficulty: "medium",
@@ -1972,6 +1989,48 @@ export const questions = [
     ],
     explanation: "Subtract 15 from both sides: n = 42 - 15 = 27",
     hints: ["What number plus 15 equals 42?", "Subtract 15 from 42"]
+  },
+  {
+    id: "staar041",
+    category: "geometry",
+    difficulty: "easy",
+    question: "A coordinate grid is shown. Which term best describes the point where the horizontal axis intersects the vertical axis?",
+    choices: [
+      { id: "a", text: "Quadrant", correct: false },
+      { id: "b", text: "x-coordinate", correct: false },
+      { id: "c", text: "y-coordinate", correct: false },
+      { id: "d", text: "Origin", correct: true }
+    ],
+    explanation: "The origin is the point (0, 0) where the x-axis (horizontal) and y-axis (vertical) intersect.",
+    hints: ["Think about the point (0, 0)", "This point has a special name"]
+  },
+  {
+    id: "staar042",
+    category: "data",
+    difficulty: "medium",
+    question: "Students recorded the number of books they read: 5, 3, 8, 3, 6, 3, 9, 4. What is the mode of this data set?",
+    choices: [
+      { id: "a", text: "3", correct: true },
+      { id: "b", text: "5", correct: false },
+      { id: "c", text: "6", correct: false },
+      { id: "d", text: "8", correct: false }
+    ],
+    explanation: "The mode is the value that appears most frequently. The number 3 appears three times, more than any other number.",
+    hints: ["Count how many times each number appears", "Which number appears most often?"]
+  },
+  {
+    id: "staar043",
+    category: "fractions",
+    difficulty: "medium",
+    question: "A baker used 2 1/4 cups of flour for cookies and 1 3/4 cups of flour for muffins. How many cups of flour did the baker use in all?",
+    choices: [
+      { id: "a", text: "3 1/2 cups", correct: false },
+      { id: "b", text: "4 cups", correct: true },
+      { id: "c", text: "4 1/4 cups", correct: false },
+      { id: "d", text: "3 cups", correct: false }
+    ],
+    explanation: "Add the mixed numbers: 2 1/4 + 1 3/4 = 3 4/4 = 4 cups",
+    hints: ["Add the whole numbers first: 2 + 1 = 3", "Then add the fractions: 1/4 + 3/4 = 4/4 = 1"]
   }
 ];
 
