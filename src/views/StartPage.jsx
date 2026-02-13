@@ -34,6 +34,16 @@ export function StartPage({ onStartTest }) {
           >
             Full Test (40 questions)
           </Button>
+
+          <div style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '2px solid #dee2e6' }}>
+            <Button
+              size="large"
+              onClick={() => onStartTest(10, ['staar004', 'staar005', 'staar006', 'staar008', 'staar012', 'staar015', 'staar022', 'staar030', 'staar032', 'staar034'])}
+              style={{ backgroundColor: '#17a2b8', borderColor: '#17a2b8' }}
+            >
+              🖼 Test Image Questions Only (10)
+            </Button>
+          </div>
         </div>
 
         <p style={{ marginTop: '3rem', color: '#6c757d', fontSize: '16px' }}>

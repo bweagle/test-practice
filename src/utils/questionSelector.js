@@ -117,19 +117,33 @@ export function ensureDifficultyMix(questions, testLength) {
  * Select questions for a test with balanced categories and difficulty
  * @param {Array} allQuestions - All available questions
  * @param {number} testLength - Number of questions for the test
- * @param {Array} focusCategories - Optional array of categories to focus on (for targeted practice)
+ * @param {Array} focusCategories - Optional array of categories to focus on OR specific question IDs
  * @returns {Array} - Selected questions
  */
 export function selectTestQuestions(allQuestions, testLength, focusCategories = null) {
-  // Filter questions by focus categories if provided
+  // Check if focusCategories contains question IDs (they start with a letter/number pattern like "staar004")
   let questionsPool = allQuestions;
   if (focusCategories && focusCategories.length > 0) {
-    questionsPool = allQuestions.filter(q => focusCategories.includes(q.category));
+    // Check if first item looks like a question ID (contains numbers/specific format)
+    const isQuestionIds = focusCategories[0] && (focusCategories[0].includes('staar') || focusCategories[0].length > 10);
 
-    // If no questions found in focus categories, fall back to all questions
+    if (isQuestionIds) {
+      // Filter by specific question IDs
+      questionsPool = allQuestions.filter(q => focusCategories.includes(q.id));
+    } else {
+      // Filter by categories
+      questionsPool = allQuestions.filter(q => focusCategories.includes(q.category));
+    }
+
+    // If no questions found, fall back to all questions
     if (questionsPool.length === 0) {
       questionsPool = allQuestions;
     }
+  }
+
+  // If we have specific questions (small pool), just shuffle and return
+  if (questionsPool.length <= testLength) {
+    return shuffleArray(questionsPool);
   }
 
   // First, select random questions with balanced categories
