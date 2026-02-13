@@ -1812,6 +1812,24 @@ export const questions = [
     hints: ["Write as 12/15 first", "Simplify by finding the GCF"]
   },
   {
+    id: "staar015",
+    category: "algebra",
+    difficulty: "medium",
+    multiSelect: true,
+    correctCount: "TWO",
+    imageDescription: "A coordinate grid showing three plotted points for the equation y = x + 3:\n- Point at (1, 4)\n- Point at (3, 6)\n- Point at (5, 8)\nThe grid has x-axis from 0 to 8 and y-axis from 0 to 8.",
+    question: "Which ordered pairs represent other points on the graph for this equation?",
+    choices: [
+      { id: "a", text: "(4, 1)", correct: false },
+      { id: "b", text: "(0, 3)", correct: true },
+      { id: "c", text: "(2, 6)", correct: false },
+      { id: "d", text: "(5, 2)", correct: false },
+      { id: "e", text: "(4, 7)", correct: true }
+    ],
+    explanation: "For a point to be on the line y = x + 3, the y-coordinate must equal the x-coordinate plus 3.\n• (0, 3): 3 = 0 + 3 ✓\n• (4, 7): 7 = 4 + 3 ✓\nThe other choices don't satisfy the equation:\n• (4, 1): 1 ≠ 4 + 3 = 7\n• (2, 6): 6 ≠ 2 + 3 = 5\n• (5, 2): 2 ≠ 5 + 3 = 8",
+    hints: ["Test each ordered pair in the equation y = x + 3", "The y-value should equal x + 3"]
+  },
+  {
     id: "staar016",
     category: "numbers",
     difficulty: "medium",
