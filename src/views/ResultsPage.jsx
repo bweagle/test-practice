@@ -50,6 +50,11 @@ export function ResultsPage({ results, onTakeAnother, onPracticeFocus }) {
               <div style={{ fontSize: '14px', color: '#6c757d' }}>
                 {scores.correct} of {scores.total} correct
               </div>
+              {scores.averageTime > 0 && (
+                <div style={{ fontSize: '13px', color: '#0066cc', marginTop: '2px' }}>
+                  ⏱ Avg: {scores.averageTime}s per question
+                </div>
+              )}
             </div>
             <div style={{ width: '200px' }}>
               <div className="staar-category-bar">

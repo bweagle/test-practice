@@ -40,7 +40,7 @@ export function calculateCategoryScores(session) {
     return {};
   }
 
-  const { questions, answers } = session;
+  const { questions, answers, questionTimes } = session;
   const categoryMap = {};
 
   questions.forEach(q => {
@@ -52,12 +52,19 @@ export function calculateCategoryScores(session) {
         correct: 0,
         total: 0,
         percentage: 0,
-        questions: []
+        questions: [],
+        totalTime: 0,
+        averageTime: 0
       };
     }
 
     categoryMap[category].total++;
     categoryMap[category].questions.push(q.id);
+
+    // Add time spent on this question
+    if (questionTimes && questionTimes[q.id]) {
+      categoryMap[category].totalTime += questionTimes[q.id];
+    }
 
     // Check if answer is correct
     const answer = answers[q.id];
@@ -66,10 +73,11 @@ export function calculateCategoryScores(session) {
     }
   });
 
-  // Calculate percentages
+  // Calculate percentages and average times
   Object.keys(categoryMap).forEach(category => {
-    const { correct, total } = categoryMap[category];
+    const { correct, total, totalTime } = categoryMap[category];
     categoryMap[category].percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
+    categoryMap[category].averageTime = total > 0 ? Math.round(totalTime / total) : 0;
   });
 
   return categoryMap;

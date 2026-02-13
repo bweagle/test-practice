@@ -62,8 +62,12 @@ export function selectRandomQuestions(allQuestions, count) {
     selected.push(...remaining.slice(0, count - selected.length));
   }
 
+  // Remove any potential duplicates (should not happen, but safety check)
+  const uniqueSelected = Array.from(new Set(selected.map(q => q.id)))
+    .map(id => selected.find(q => q.id === id));
+
   // Final shuffle to mix categories
-  return shuffleArray(selected);
+  return shuffleArray(uniqueSelected);
 }
 
 /**
