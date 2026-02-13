@@ -1942,6 +1942,21 @@ export const questions = [
     hints: ["Tom has 4 times Sam's amount", "Divide 36 by 4"]
   },
   {
+    id: "staar022",
+    category: "fractions",
+    difficulty: "medium",
+    imageDescription: "A hundredths grid (10×10) with 32 squares shaded, representing 0.32. The shaded area is divided into 4 equal groups of 8 squares each. A key shows that a fully shaded grid = 1 whole.",
+    question: "The model shown represents a division equation. Which equation could be represented by the model?",
+    choices: [
+      { id: "a", text: "32 ÷ 4 = 8", correct: false },
+      { id: "b", text: "0.32 ÷ 4 = 0.08", correct: true },
+      { id: "c", text: "0.8 ÷ 4 = 0.2", correct: false },
+      { id: "d", text: "8 ÷ 4 = 2", correct: false }
+    ],
+    explanation: "The shaded area represents 32 hundredths (0.32). The model shows this divided into 4 equal groups, with each group containing 8 hundredths (0.08). Therefore: 0.32 ÷ 4 = 0.08",
+    hints: ["Count the shaded squares: 32 out of 100", "32 hundredths = 0.32", "Divided into 4 groups of 8 = 0.08"]
+  },
+  {
     id: "staar024",
     category: "measurement",
     difficulty: "medium",
