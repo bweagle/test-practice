@@ -22,10 +22,10 @@ This project is configured to deploy to GitHub Pages at `/test-practice/`.
    git add -A
    git commit -m "Initial commit"
    git branch -M main
-   git remote add origin git@github.com:brianwhiteeagle/test-practice.git
+   git remote add origin git@github.com:bweagle/test-practice.git
    git push -u origin main
    ```
-3. Update the deploy script in [package.json](package.json) with your GitHub username (replace `brianwhiteeagle`)
+3. Update the deploy script in [package.json](package.json) with your GitHub username (replace `bweagle`)
 4. Deploy:
    ```bash
    npm run deploy
@@ -36,7 +36,7 @@ This project is configured to deploy to GitHub Pages at `/test-practice/`.
    - Set Branch to "gh-pages" and folder to "/ (root)"
    - Save
 
-Your site will be live at `https://brianwhiteeagle.github.io/test-practice/`
+Your site will be live at `https://bweagle.github.io/test-practice/`
 
 ---
 
