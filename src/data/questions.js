@@ -1564,6 +1564,414 @@ export const questions = [
     ],
     explanation: "Overall trend goes from 70° to 74°, increasing",
     hints: ["Compare first day to last day", "70° to 74° is going up"]
+  },
+
+  // AUTHENTIC STAAR TEST QUESTIONS (from 2023 STAAR Redesign Practice Test)
+  {
+    id: "staar001",
+    category: "numbers",
+    difficulty: "medium",
+    question: "A recipe for one batch of cookies uses 1.25 cups of butter. How many cups of butter are needed to make 6 batches of cookies?",
+    choices: [
+      { id: "a", text: "7.5 cups", correct: true },
+      { id: "b", text: "7.3 cups", correct: false },
+      { id: "c", text: "6.25 cups", correct: false },
+      { id: "d", text: "6.3 cups", correct: false }
+    ],
+    explanation: "Multiply the amount needed for one batch by the number of batches: 1.25 × 6 = 7.5 cups",
+    hints: ["Multiply 1.25 by 6", "Think of 1.25 as 1 and 1/4"]
+  },
+  {
+    id: "staar003",
+    category: "measurement",
+    difficulty: "medium",
+    question: "Gabriella walked 6.85 kilometers on Friday. On Saturday she walked 2 3/10 kilometers. How much farther did Gabriella walk on Friday than on Saturday?",
+    choices: [
+      { id: "a", text: "9.15 kilometers", correct: false },
+      { id: "b", text: "4.82 kilometers", correct: false },
+      { id: "c", text: "4.55 kilometers", correct: true },
+      { id: "d", text: "3.82 kilometers", correct: false }
+    ],
+    explanation: "First convert 2 3/10 to 2.3. Then subtract: 6.85 - 2.3 = 4.55 kilometers",
+    hints: ["Convert the mixed number to a decimal first", "3/10 = 0.3"]
+  },
+  {
+    id: "staar005",
+    category: "fractions",
+    difficulty: "medium",
+    question: "At a fruit stand, 2/3 of the apples are red. Of the red apples, 3/4 of them are sweet. What fraction of all the apples at the fruit stand are red and sweet?",
+    choices: [
+      { id: "a", text: "5/7", correct: false },
+      { id: "b", text: "1/2", correct: true },
+      { id: "c", text: "5/12", correct: false },
+      { id: "d", text: "6/7", correct: false }
+    ],
+    explanation: "Multiply the fractions: 2/3 × 3/4 = 6/12 = 1/2. Half of all the apples are red and sweet.",
+    hints: ["Multiply the two fractions", "Remember to simplify your answer"]
+  },
+  {
+    id: "staar007",
+    category: "numbers",
+    difficulty: "medium",
+    question: "Look at the number 3.55. In this number, what is the relationship between the values of the two 5s?",
+    choices: [
+      { id: "a", text: "The 5 in the tenths place is 10 times the value of the 5 in the hundredths place", correct: true },
+      { id: "b", text: "The 5 in the hundredths place is 10 times the value of the 5 in the tenths place", correct: false },
+      { id: "c", text: "Both 5s have the same value", correct: false },
+      { id: "d", text: "The 5 in the tenths place is 100 times the value of the 5 in the hundredths place", correct: false }
+    ],
+    explanation: "In 3.55, the first 5 is in the tenths place (0.5) and the second 5 is in the hundredths place (0.05). Since 0.5 = 0.05 × 10, the 5 in the tenths place is 10 times the value of the 5 in the hundredths place.",
+    hints: ["Identify which place each 5 is in", "Tenths place is 10 times hundredths place"]
+  },
+  {
+    id: "staar009",
+    category: "geometry",
+    difficulty: "medium",
+    question: "A rectangular prism has a length of 8 centimeters, a width of 4 centimeters, and a height of 5 centimeters. What is the volume of the rectangular prism?",
+    choices: [
+      { id: "a", text: "17 cubic centimeters", correct: false },
+      { id: "b", text: "68 cubic centimeters", correct: false },
+      { id: "c", text: "160 cubic centimeters", correct: true },
+      { id: "d", text: "200 cubic centimeters", correct: false }
+    ],
+    explanation: "Volume = length × width × height = 8 × 4 × 5 = 160 cubic centimeters",
+    hints: ["Multiply all three dimensions", "V = l × w × h"]
+  },
+  {
+    id: "staar010",
+    category: "geometry",
+    difficulty: "easy",
+    question: "A rectangle has an area of 48 square inches and a width of 6 inches. What is the perimeter of the rectangle in inches?",
+    choices: [
+      { id: "a", text: "8 inches", correct: false },
+      { id: "b", text: "14 inches", correct: false },
+      { id: "c", text: "28 inches", correct: true },
+      { id: "d", text: "54 inches", correct: false }
+    ],
+    explanation: "First find length: Area = length × width, so 48 = length × 6, therefore length = 8 inches. Perimeter = 2(length + width) = 2(8 + 6) = 2(14) = 28 inches",
+    hints: ["First find the length using the area", "Perimeter = 2(l + w)"]
+  },
+  {
+    id: "staar011",
+    category: "algebra",
+    difficulty: "medium",
+    question: "The table shows a pattern. Input: 1, 2, 3, 4, 5 Output: 6, 11, 16, 21, 26. Which rule describes the pattern?",
+    choices: [
+      { id: "a", text: "Multiply the input by 5, then add 1", correct: true },
+      { id: "b", text: "Multiply the input by 6", correct: false },
+      { id: "c", text: "Add 5 to the input", correct: false },
+      { id: "d", text: "Multiply the input by 4, then add 2", correct: false }
+    ],
+    explanation: "Test the rule: 1 × 5 + 1 = 6, 2 × 5 + 1 = 11, 3 × 5 + 1 = 16. The rule is multiply by 5, then add 1.",
+    hints: ["Look at the relationship between input and output", "What operation turns 1 into 6?"]
+  },
+  {
+    id: "staar013",
+    category: "geometry",
+    difficulty: "medium",
+    question: "One side of a square window has a length of 36 inches. What is the area of the window in square feet?",
+    choices: [
+      { id: "a", text: "9 square feet", correct: true },
+      { id: "b", text: "12 square feet", correct: false },
+      { id: "c", text: "108 square feet", correct: false },
+      { id: "d", text: "144 square feet", correct: false }
+    ],
+    explanation: "First convert 36 inches to feet: 36 ÷ 12 = 3 feet. Area of square = side × side = 3 × 3 = 9 square feet",
+    hints: ["Convert inches to feet first (12 inches = 1 foot)", "Area of square = side²"]
+  },
+  {
+    id: "staar014",
+    category: "fractions",
+    difficulty: "easy",
+    question: "Jessica made 12 out of 15 free throws at basketball practice. What fraction of the free throws did Jessica make?",
+    choices: [
+      { id: "a", text: "3/5", correct: false },
+      { id: "b", text: "4/5", correct: true },
+      { id: "c", text: "5/4", correct: false },
+      { id: "d", text: "12/15", correct: false }
+    ],
+    explanation: "Jessica made 12/15 free throws. Simplify by dividing both by 3: 12 ÷ 3 = 4, 15 ÷ 3 = 5, so 4/5",
+    hints: ["Write as 12/15 first", "Simplify by finding the GCF"]
+  },
+  {
+    id: "staar016",
+    category: "numbers",
+    difficulty: "medium",
+    question: "Marcus bought 4 packages of treats for his dog. Each package weighs 6.48 ounces. What is the total weight of all 4 packages?",
+    choices: [
+      { id: "a", text: "10.48 ounces", correct: false },
+      { id: "b", text: "24.32 ounces", correct: false },
+      { id: "c", text: "25.92 ounces", correct: true },
+      { id: "d", text: "26.12 ounces", correct: false }
+    ],
+    explanation: "Multiply the weight of one package by 4: 6.48 × 4 = 25.92 ounces",
+    hints: ["Multiply 6.48 by 4", "Be careful with decimal placement"]
+  },
+  {
+    id: "staar017",
+    category: "fractions",
+    difficulty: "medium",
+    question: "Sam filled 3 3/4 pages in his stamp album. Each page holds 8 stamps. How many stamps did Sam place in his album?",
+    choices: [
+      { id: "a", text: "24 stamps", correct: false },
+      { id: "b", text: "30 stamps", correct: true },
+      { id: "c", text: "32 stamps", correct: false },
+      { id: "d", text: "35 stamps", correct: false }
+    ],
+    explanation: "Convert 3 3/4 to an improper fraction: 15/4. Then multiply: 15/4 × 8 = 120/4 = 30 stamps",
+    hints: ["Convert the mixed number to an improper fraction", "Then multiply by 8"]
+  },
+  {
+    id: "staar018",
+    category: "numbers",
+    difficulty: "easy",
+    question: "A theater has 1,420 seats. Which expression shows another way to represent 1,420?",
+    choices: [
+      { id: "a", text: "(1 × 100) + (4 × 100) + (2 × 10)", correct: false },
+      { id: "b", text: "(1 × 1,000) + (4 × 100) + (2 × 10)", correct: true },
+      { id: "c", text: "(1 × 1,000) + (4 × 10) + (2 × 10)", correct: false },
+      { id: "d", text: "(1 × 100) + (4 × 10) + (2 × 10)", correct: false }
+    ],
+    explanation: "Break down 1,420 by place value: 1,000 + 400 + 20 = (1 × 1,000) + (4 × 100) + (2 × 10)",
+    hints: ["Think about place value", "1,420 = 1 thousand + 4 hundreds + 2 tens"]
+  },
+  {
+    id: "staar019",
+    category: "numbers",
+    difficulty: "medium",
+    question: "A group of students compared their marble collections. The table shows the number of marbles each student has. If they combined all their marbles equally, how many marbles would each of the 4 students have? Carlos: 38, DeShawn: 47, Emma: 61, Fiona: 30",
+    choices: [
+      { id: "a", text: "44 marbles", correct: true },
+      { id: "b", text: "46 marbles", correct: false },
+      { id: "c", text: "54 marbles", correct: false },
+      { id: "d", text: "176 marbles", correct: false }
+    ],
+    explanation: "First add all marbles: 38 + 47 + 61 + 30 = 176. Then divide by 4 students: 176 ÷ 4 = 44 marbles each",
+    hints: ["First find the total number of marbles", "Then divide by 4"]
+  },
+  {
+    id: "staar020",
+    category: "measurement",
+    difficulty: "easy",
+    question: "Jake's science class is 55 minutes long. The class starts at 1:40 p.m. At what time does Jake's science class end?",
+    choices: [
+      { id: "a", text: "2:25 p.m.", correct: false },
+      { id: "b", text: "2:35 p.m.", correct: true },
+      { id: "c", text: "2:45 p.m.", correct: false },
+      { id: "d", text: "2:55 p.m.", correct: false }
+    ],
+    explanation: "From 1:40, add 20 minutes to get to 2:00, then add the remaining 35 minutes: 2:00 + 35 minutes = 2:35 p.m.",
+    hints: ["Break it into chunks: 1:40 + 20 min = 2:00", "Then add the remaining 35 minutes"]
+  },
+  {
+    id: "staar021",
+    category: "algebra",
+    difficulty: "medium",
+    question: "Tom has 36 toy cars. This is 4 times as many toy cars as Sam has. How many toy cars does Sam have?",
+    choices: [
+      { id: "a", text: "9 toy cars", correct: true },
+      { id: "b", text: "32 toy cars", correct: false },
+      { id: "c", text: "40 toy cars", correct: false },
+      { id: "d", text: "144 toy cars", correct: false }
+    ],
+    explanation: "If Tom has 4 times as many as Sam, divide Tom's amount by 4: 36 ÷ 4 = 9 toy cars",
+    hints: ["Tom has 4 times Sam's amount", "Divide 36 by 4"]
+  },
+  {
+    id: "staar024",
+    category: "measurement",
+    difficulty: "medium",
+    question: "A container holds 8.2 liters of water. Morgan pours out 340 milliliters of water. How many milliliters of water are left in the container?",
+    choices: [
+      { id: "a", text: "4.8 milliliters", correct: false },
+      { id: "b", text: "488 milliliters", correct: false },
+      { id: "c", text: "7,860 milliliters", correct: true },
+      { id: "d", text: "8,540 milliliters", correct: false }
+    ],
+    explanation: "First convert 8.2 liters to milliliters: 8.2 × 1,000 = 8,200 mL. Then subtract: 8,200 - 340 = 7,860 mL",
+    hints: ["Convert liters to milliliters first (1 L = 1,000 mL)", "Then subtract"]
+  },
+  {
+    id: "staar025",
+    category: "fractions",
+    difficulty: "medium",
+    question: "Andrea had 3/4 of a gallon of paint. She used 1/2 of a gallon to paint her bedroom. How much paint does Andrea have left?",
+    choices: [
+      { id: "a", text: "1/4 gallon", correct: true },
+      { id: "b", text: "1/2 gallon", correct: false },
+      { id: "c", text: "2/4 gallon", correct: false },
+      { id: "d", text: "2/6 gallon", correct: false }
+    ],
+    explanation: "Subtract the fractions: 3/4 - 1/2. Convert 1/2 to 2/4, then: 3/4 - 2/4 = 1/4 gallon",
+    hints: ["Find a common denominator", "1/2 = 2/4"]
+  },
+  {
+    id: "staar026",
+    category: "geometry",
+    difficulty: "easy",
+    question: "Which figure appears to have exactly 2 lines of symmetry?",
+    choices: [
+      { id: "a", text: "Square", correct: false },
+      { id: "b", text: "Rectangle (not square)", correct: true },
+      { id: "c", text: "Equilateral triangle", correct: false },
+      { id: "d", text: "Circle", correct: false }
+    ],
+    explanation: "A rectangle (that is not a square) has exactly 2 lines of symmetry - one vertical and one horizontal through the center. A square has 4 lines of symmetry.",
+    hints: ["Draw lines through the middle of each shape", "Count how many ways you can fold it in half"]
+  },
+  {
+    id: "staar027",
+    category: "data",
+    difficulty: "medium",
+    question: "The stem-and-leaf plot shows the number of points players scored in a basketball game. Stem: 1 Leaves: 2, 4, 8; Stem: 2 Leaves: 1, 3, 6. What is the range of the data?",
+    choices: [
+      { id: "a", text: "12 points", correct: false },
+      { id: "b", text: "14 points", correct: true },
+      { id: "c", text: "15 points", correct: false },
+      { id: "d", text: "26 points", correct: false }
+    ],
+    explanation: "The data values are: 12, 14, 18, 21, 23, 26. Range = highest - lowest = 26 - 12 = 14 points",
+    hints: ["List all the data values", "Range = maximum - minimum"]
+  },
+  {
+    id: "staar029",
+    category: "numbers",
+    difficulty: "medium",
+    question: "Which number is 100 times as great as 4.18?",
+    choices: [
+      { id: "a", text: "0.0418", correct: false },
+      { id: "b", text: "41.8", correct: false },
+      { id: "c", text: "418", correct: true },
+      { id: "d", text: "4,180", correct: false }
+    ],
+    explanation: "To multiply by 100, move the decimal point 2 places to the right: 4.18 × 100 = 418",
+    hints: ["Multiply by 100", "Move the decimal point 2 places right"]
+  },
+  {
+    id: "staar031",
+    category: "fractions",
+    difficulty: "medium",
+    question: "A baker used 2/5 cup of milk, 3/4 cup of water, and 1/2 cup of oil in a recipe. What is the total amount of liquid the baker used in the recipe?",
+    choices: [
+      { id: "a", text: "1 13/20 cups", correct: true },
+      { id: "b", text: "1 1/2 cups", correct: false },
+      { id: "c", text: "6/11 cups", correct: false },
+      { id: "d", text: "1 3/5 cups", correct: false }
+    ],
+    explanation: "Convert to common denominator of 20: 2/5 = 8/20, 3/4 = 15/20, 1/2 = 10/20. Add: 8/20 + 15/20 + 10/20 = 33/20 = 1 13/20 cups",
+    hints: ["Find a common denominator for all three fractions", "20 works for 5, 4, and 2"]
+  },
+  {
+    id: "staar033",
+    category: "numbers",
+    difficulty: "medium",
+    question: "A grid has 100 squares. If 0.34 of the grid is shaded, how many squares are shaded?",
+    choices: [
+      { id: "a", text: "3 squares", correct: false },
+      { id: "b", text: "4 squares", correct: false },
+      { id: "c", text: "34 squares", correct: true },
+      { id: "d", text: "66 squares", correct: false }
+    ],
+    explanation: "0.34 means 34 hundredths. Since the grid has 100 squares, 0.34 of 100 = 34 squares",
+    hints: ["0.34 = 34/100", "Multiply 0.34 × 100"]
+  },
+  {
+    id: "staar034",
+    category: "geometry",
+    difficulty: "hard",
+    question: "A coordinate grid shows points at (2, 3) and (2, 7). What is the distance between these two points?",
+    choices: [
+      { id: "a", text: "4 units", correct: true },
+      { id: "b", text: "5 units", correct: false },
+      { id: "c", text: "9 units", correct: false },
+      { id: "d", text: "10 units", correct: false }
+    ],
+    explanation: "Both points have the same x-coordinate (2), so they are on a vertical line. The distance is the difference in y-coordinates: 7 - 3 = 4 units",
+    hints: ["Both points have x = 2", "Subtract the y-coordinates"]
+  },
+  {
+    id: "staar035",
+    category: "algebra",
+    difficulty: "medium",
+    question: "Ben saved $12 in January. Each month after that, he saved $4 more than the previous month. How much did Ben save in April?",
+    choices: [
+      { id: "a", text: "$20", correct: false },
+      { id: "b", text: "$24", correct: true },
+      { id: "c", text: "$28", correct: false },
+      { id: "d", text: "$48", correct: false }
+    ],
+    explanation: "January: $12, February: $12 + $4 = $16, March: $16 + $4 = $20, April: $20 + $4 = $24",
+    hints: ["Create a sequence: $12, $16, $20, ...", "Add $4 each month"]
+  },
+  {
+    id: "staar036",
+    category: "measurement",
+    difficulty: "medium",
+    question: "A fish tank can hold 45 gallons of water. Marco fills the tank to 4/5 of its capacity. How many gallons of water are in the tank?",
+    choices: [
+      { id: "a", text: "9 gallons", correct: false },
+      { id: "b", text: "36 gallons", correct: true },
+      { id: "c", text: "40 gallons", correct: false },
+      { id: "d", text: "49 gallons", correct: false }
+    ],
+    explanation: "Multiply the total capacity by the fraction: 45 × 4/5 = 180/5 = 36 gallons",
+    hints: ["Find 4/5 of 45", "Multiply 45 × 4, then divide by 5"]
+  },
+  {
+    id: "staar037",
+    category: "data",
+    difficulty: "easy",
+    question: "The following data shows test scores: 85, 92, 78, 85, 90, 85, 88. What is the mode of this data?",
+    choices: [
+      { id: "a", text: "78", correct: false },
+      { id: "b", text: "85", correct: true },
+      { id: "c", text: "88", correct: false },
+      { id: "d", text: "92", correct: false }
+    ],
+    explanation: "The mode is the number that appears most often. 85 appears 3 times, more than any other number",
+    hints: ["Mode = most frequent value", "Count how many times each number appears"]
+  },
+  {
+    id: "staar038",
+    category: "geometry",
+    difficulty: "medium",
+    question: "A triangle has angles measuring 45 degrees and 55 degrees. What is the measure of the third angle?",
+    choices: [
+      { id: "a", text: "80 degrees", correct: true },
+      { id: "b", text: "90 degrees", correct: false },
+      { id: "c", text: "100 degrees", correct: false },
+      { id: "d", text: "180 degrees", correct: false }
+    ],
+    explanation: "The sum of angles in a triangle is 180 degrees. 180 - 45 - 55 = 80 degrees",
+    hints: ["All angles in a triangle add up to 180°", "180 - 45 - 55 = ?"]
+  },
+  {
+    id: "staar039",
+    category: "fractions",
+    difficulty: "hard",
+    question: "Maria ran 3/8 of a mile on Monday and 5/6 of a mile on Tuesday. How much farther did Maria run on Tuesday than on Monday?",
+    choices: [
+      { id: "a", text: "2/14 mile", correct: false },
+      { id: "b", text: "11/24 mile", correct: true },
+      { id: "c", text: "1/2 mile", correct: false },
+      { id: "d", text: "8/14 mile", correct: false }
+    ],
+    explanation: "Subtract: 5/6 - 3/8. Common denominator is 24: 20/24 - 9/24 = 11/24 mile",
+    hints: ["Find a common denominator", "24 is divisible by both 6 and 8"]
+  },
+  {
+    id: "staar040",
+    category: "algebra",
+    difficulty: "medium",
+    question: "If n + 15 = 42, what is the value of n?",
+    choices: [
+      { id: "a", text: "27", correct: true },
+      { id: "b", text: "32", correct: false },
+      { id: "c", text: "57", correct: false },
+      { id: "d", text: "630", correct: false }
+    ],
+    explanation: "Subtract 15 from both sides: n = 42 - 15 = 27",
+    hints: ["What number plus 15 equals 42?", "Subtract 15 from 42"]
   }
 ];
 
