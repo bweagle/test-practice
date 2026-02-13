@@ -2072,16 +2072,17 @@ export const questions = [
   {
     id: "staar034",
     category: "geometry",
-    difficulty: "hard",
-    question: "A coordinate grid shows points at (2, 3) and (2, 7). What is the distance between these two points?",
+    difficulty: "easy",
+    imageDescription: "A coordinate grid is shown with x-axis from 0 to 9 and y-axis from 0 to 9. The grid has horizontal and vertical lines forming squares. The axes are labeled with 'x' on the horizontal axis and 'y' on the vertical axis.",
+    question: "A coordinate grid is shown. Which term best describes the point where the horizontal axis intersects the vertical axis?",
     choices: [
-      { id: "a", text: "4 units", correct: true },
-      { id: "b", text: "5 units", correct: false },
-      { id: "c", text: "9 units", correct: false },
-      { id: "d", text: "10 units", correct: false }
+      { id: "a", text: "Quadrant", correct: false },
+      { id: "b", text: "x-coordinate", correct: false },
+      { id: "c", text: "y-coordinate", correct: false },
+      { id: "d", text: "Origin", correct: true }
     ],
-    explanation: "Both points have the same x-coordinate (2), so they are on a vertical line. The distance is the difference in y-coordinates: 7 - 3 = 4 units",
-    hints: ["Both points have x = 2", "Subtract the y-coordinates"]
+    explanation: "The origin is the point (0, 0) where the x-axis (horizontal) and y-axis (vertical) intersect. This is the starting point of the coordinate system.",
+    hints: ["Think about the point (0, 0)", "This point has a special name in mathematics"]
   },
   {
     id: "staar035",
