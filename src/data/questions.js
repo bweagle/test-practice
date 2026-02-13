@@ -1859,17 +1859,45 @@ export const questions = [
   },
   {
     id: "staar018",
-    category: "numbers",
-    difficulty: "easy",
-    question: "A theater has 1,420 seats. Which expression shows another way to represent 1,420?",
+    category: "algebra",
+    difficulty: "medium",
+    question: "The equation y = x + 6 represents the relationship between x and y. When x = 10, what is the value of y?",
     choices: [
-      { id: "a", text: "(1 × 100) + (4 × 100) + (2 × 10)", correct: false },
-      { id: "b", text: "(1 × 1,000) + (4 × 100) + (2 × 10)", correct: true },
-      { id: "c", text: "(1 × 1,000) + (4 × 10) + (2 × 10)", correct: false },
-      { id: "d", text: "(1 × 100) + (4 × 10) + (2 × 10)", correct: false }
+      { id: "a", text: "4", correct: false },
+      { id: "b", text: "13", correct: false },
+      { id: "c", text: "16", correct: true },
+      { id: "d", text: "18", correct: false }
     ],
-    explanation: "Break down 1,420 by place value: 1,000 + 400 + 20 = (1 × 1,000) + (4 × 100) + (2 × 10)",
-    hints: ["Think about place value", "1,420 = 1 thousand + 4 hundreds + 2 tens"]
+    explanation: "Substitute x = 10 into the equation: y = 10 + 6 = 16",
+    hints: ["Substitute x = 10 into y = x + 6", "Add 10 + 6"]
+  },
+  {
+    id: "staar018b",
+    category: "algebra",
+    difficulty: "medium",
+    question: "The equation y = x + 6 represents the relationship between x and y. When y = 19, what is the value of x?",
+    choices: [
+      { id: "a", text: "4", correct: false },
+      { id: "b", text: "13", correct: true },
+      { id: "c", text: "16", correct: false },
+      { id: "d", text: "25", correct: false }
+    ],
+    explanation: "Substitute y = 19 into the equation: 19 = x + 6. Solve for x: x = 19 - 6 = 13",
+    hints: ["Substitute y = 19 into y = x + 6", "Solve: 19 = x + 6, so x = 19 - 6"]
+  },
+  {
+    id: "staar018c",
+    category: "algebra",
+    difficulty: "medium",
+    question: "The equation y = x + 6 represents the relationship between x and y. When x = 24, what is the value of y?",
+    choices: [
+      { id: "a", text: "18", correct: false },
+      { id: "b", text: "25", correct: false },
+      { id: "c", text: "30", correct: true },
+      { id: "d", text: "16", correct: false }
+    ],
+    explanation: "Substitute x = 24 into the equation: y = 24 + 6 = 30",
+    hints: ["Substitute x = 24 into y = x + 6", "Add 24 + 6"]
   },
   {
     id: "staar019",
