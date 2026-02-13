@@ -180,12 +180,12 @@ export const questions = [
     question: "Jake ran 1/4 of a mile in the morning and 1/4 of a mile in the afternoon. What fraction of a mile did Jake run in total?",
     choices: [
       { id: "a", text: "1/8", correct: false },
-      { id: "b", text: "2/4", correct: true },
-      { id: "c", text: "1/2", correct: false },
+      { id: "b", text: "1/2", correct: true },
+      { id: "c", text: "3/4", correct: false },
       { id: "d", text: "2/8", correct: false }
     ],
-    explanation: "To find the total distance, add the fractions: 1/4 + 1/4 = 2/4 (which can also be written as 1/2).",
-    hints: ["Add the numerators, keep the denominator", "1 + 1 = 2"]
+    explanation: "To find the total distance, add the fractions: 1/4 + 1/4 = 2/4, which simplifies to 1/2.",
+    hints: ["Add the numerators, keep the denominator", "Simplify your answer: 2/4 = 1/2"]
   },
   {
     id: "f004",
@@ -193,13 +193,13 @@ export const questions = [
     difficulty: "medium",
     question: "What is 5/6 - 1/6?",
     choices: [
-      { id: "a", text: "4/6", correct: true },
+      { id: "a", text: "2/3", correct: true },
       { id: "b", text: "4/12", correct: false },
-      { id: "c", text: "6/6", correct: false },
+      { id: "c", text: "1", correct: false },
       { id: "d", text: "1/3", correct: false }
     ],
-    explanation: "5/6 - 1/6 = 4/6. Subtract the numerators, keep the denominator.",
-    hints: ["Same denominator, so subtract numerators", "5 - 1 = 4"]
+    explanation: "5/6 - 1/6 = 4/6, which simplifies to 2/3 (divide both numerator and denominator by 2).",
+    hints: ["Same denominator, so subtract numerators", "Simplify: 4/6 = 2/3"]
   },
   {
     id: "f005",
@@ -237,7 +237,7 @@ export const questions = [
     choices: [
       { id: "a", text: "5 1/4", correct: false },
       { id: "b", text: "5 3/4", correct: true },
-      { id: "c", text: "5 2/6", correct: false },
+      { id: "c", text: "5 1/2", correct: false },
       { id: "d", text: "6 1/4", correct: false }
     ],
     explanation: "Add whole numbers: 3 + 2 = 5. Add fractions: 1/2 + 1/4 = 2/4 + 1/4 = 3/4. Total: 5 3/4",
@@ -1113,15 +1113,15 @@ export const questions = [
     id: "f021",
     category: "fractions",
     difficulty: "hard",
-    question: "Add: 1 1/4 + 2 2/4",
+    question: "Add: 1 1/4 + 2 1/2",
     choices: [
       { id: "a", text: "3 1/4", correct: false },
       { id: "b", text: "3 3/4", correct: true },
       { id: "c", text: "3 1/2", correct: false },
       { id: "d", text: "4", correct: false }
     ],
-    explanation: "Whole numbers: 1 + 2 = 3. Fractions: 1/4 + 2/4 = 3/4. Total: 3 3/4",
-    hints: ["Add whole numbers and fractions separately", "1 + 2 = 3, and 1/4 + 2/4 = 3/4"]
+    explanation: "Convert 2 1/2 to 2 2/4. Whole numbers: 1 + 2 = 3. Fractions: 1/4 + 2/4 = 3/4. Total: 3 3/4",
+    hints: ["Convert 1/2 to 2/4 to get common denominator", "Add whole numbers and fractions separately"]
   },
   {
     id: "f022",
