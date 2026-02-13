@@ -1712,6 +1712,21 @@ export const questions = [
     hints: ["Identify which place each 5 is in", "Tenths place is 10 times hundredths place"]
   },
   {
+    id: "staar008",
+    category: "data",
+    difficulty: "easy",
+    imageDescription: "A bar graph titled 'Votes Received' shows three students running for class president:\n- Casey: 15 votes\n- Blake: 10 votes\n- Shanita: 10 votes\nThe y-axis shows 'Number of Votes' from 0 to 20, and the x-axis shows 'Student' names.",
+    question: "What fraction of the total votes received were for Casey?",
+    choices: [
+      { id: "a", text: "3/4", correct: false },
+      { id: "b", text: "3/7", correct: true },
+      { id: "c", text: "1/15", correct: false },
+      { id: "d", text: "1/3", correct: false }
+    ],
+    explanation: "First find the total votes: Casey (15) + Blake (10) + Shanita (10) = 35 total votes. Casey received 15 votes out of 35 total. The fraction is 15/35, which simplifies to 3/7 (divide both numerator and denominator by 5).",
+    hints: ["Find the total number of votes first", "Simplify the fraction 15/35"]
+  },
+  {
     id: "staar009",
     category: "geometry",
     difficulty: "medium",
