@@ -2027,6 +2027,21 @@ export const questions = [
     hints: ["Multiply by 100", "Move the decimal point 2 places right"]
   },
   {
+    id: "staar030",
+    category: "data",
+    difficulty: "medium",
+    imageDescription: "Stem-and-Leaf Plot: Books Checked Out on Saturday\n\nStem | Leaf\n  1  | 0 5 6\n  2  | 1 4 4\n  3  | 2 5\n\nKey: 2|1 means 21 books\n\nData values represented:\n- 10, 15, 16 (from stem 1)\n- 21, 24, 24 (from stem 2)\n- 32, 35 (from stem 3)",
+    question: "This stem-and-leaf plot shows the number of books that were checked out of a library each hour on Saturday. What is the total number of books that were checked out on Saturday?",
+    choices: [
+      { id: "a", text: "153", correct: false },
+      { id: "b", text: "167", correct: false },
+      { id: "c", text: "177", correct: true },
+      { id: "d", text: "143", correct: false }
+    ],
+    explanation: "Read each value from the stem-and-leaf plot:\n- Stem 1: 10, 15, 16\n- Stem 2: 21, 24, 24\n- Stem 3: 32, 35\nAdd all values: 10 + 15 + 16 + 21 + 24 + 24 + 32 + 35 = 177 books",
+    hints: ["Convert each stem|leaf combination to a number", "Add all 8 values together"]
+  },
+  {
     id: "staar031",
     category: "fractions",
     difficulty: "medium",
