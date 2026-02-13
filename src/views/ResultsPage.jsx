@@ -8,6 +8,18 @@ export function ResultsPage({ results, onTakeAnother, onPracticeFocus }) {
 
   const performanceLevel = getPerformanceLevel(results.percentage);
 
+  // Format total time to minutes and seconds
+  const formatTime = (milliseconds) => {
+    const seconds = Math.floor(milliseconds / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+
+    if (minutes > 0) {
+      return `${minutes}m ${remainingSeconds}s`;
+    }
+    return `${seconds}s`;
+  };
+
   return (
     <div className="staar-container">
       <div className="staar-results-header">
@@ -21,6 +33,11 @@ export function ResultsPage({ results, onTakeAnother, onPracticeFocus }) {
         <p style={{ color: '#6c757d', marginTop: '1rem' }}>
           {performanceLevel.message}
         </p>
+        {results.totalTime > 0 && (
+          <p style={{ color: '#6c757d', marginTop: '0.5rem', fontSize: '16px' }}>
+            ⏱ Total Time: {formatTime(results.totalTime)}
+          </p>
+        )}
       </div>
 
       {/* Category Scores */}
