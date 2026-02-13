@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { QuestionCard } from '../components/QuestionCard';
 import { Button } from '../components/Button';
 import { ProgressBar } from '../components/ProgressBar';
@@ -16,6 +17,19 @@ export function TestPage({
   onNext,
   onSubmit
 }) {
+  const [liveTime, setLiveTime] = useState(currentQuestionTime);
+
+  // Update live time every second
+  useEffect(() => {
+    setLiveTime(currentQuestionTime);
+
+    const interval = setInterval(() => {
+      setLiveTime(prev => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [currentQuestionIndex, currentQuestionTime]);
+
   if (!session || !currentQuestion) {
     return <div className="staar-loading">Loading...</div>;
   }
@@ -36,7 +50,7 @@ export function TestPage({
       <div style={{ marginBottom: '1rem' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', fontSize: '14px', color: '#6c757d' }}>
           <span>Progress: {progress}%</span>
-          <span style={{ fontWeight: '600', color: '#0066cc' }}>⏱ {currentQuestionTime}s</span>
+          <span style={{ fontWeight: '600', color: '#0066cc' }}>⏱ {liveTime}s</span>
           <span>{Object.keys(session.answers).length} / {session.questions.length} answered</span>
         </div>
         <ProgressBar percentage={progress} />

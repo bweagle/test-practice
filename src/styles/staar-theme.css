@@ -49,7 +49,8 @@ body {
 
 .staar-container {
   max-width: var(--max-width);
-  width: 100%;
+  min-width: min(var(--max-width), 100vw - 4rem);
+  width: var(--max-width);
   margin: 0 auto;
   padding: var(--spacing-lg);
   box-sizing: border-box;
@@ -303,6 +304,8 @@ body {
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .staar-container {
+    min-width: 100vw - 2rem;
+    width: 100%;
     padding: var(--spacing-md);
   }
 
