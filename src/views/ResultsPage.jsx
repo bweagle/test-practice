@@ -152,6 +152,61 @@ export function ResultsPage({ results, onTakeAnother, onPracticeFocus }) {
           </h2>
           {results.incorrectQuestions.map((item, index) => {
             const isMultiSelect = item.question.multiSelect || false;
+            const isDropdown = item.question.questionType === 'dropdown';
+
+            if (isDropdown) {
+              // Handle dropdown questions
+              const userAnswerObj = item.userAnswer || {};
+              const hasAnswer = Object.keys(userAnswerObj).length > 0;
+
+              return (
+                <div key={item.question.id} style={{ marginBottom: '2rem', padding: '1.5rem', backgroundColor: '#fff', border: '2px solid #dee2e6', borderRadius: '8px' }}>
+                  {item.question.imageDescription && (
+                    <div style={{
+                      margin: '0 0 1rem 0',
+                      padding: '1rem',
+                      backgroundColor: '#f8f9fa',
+                      borderRadius: '8px',
+                      fontSize: '14px',
+                      color: '#495057'
+                    }}>
+                      <strong>Data:</strong> {item.question.imageDescription}
+                    </div>
+                  )}
+
+                  <div style={{ fontWeight: '600', marginBottom: '1rem', color: '#495057' }}>
+                    Question {index + 1}: {item.question.question.replace(/\[DROPDOWN\d+\]/g, '___')}
+                  </div>
+
+                  {hasAnswer && (
+                    <div style={{ marginBottom: '0.5rem', color: '#dc3545' }}>
+                      ✗ Your answers: {item.question.dropdowns.map((dd, i) =>
+                        `${dd.id}: ${userAnswerObj[dd.id] || 'Not answered'}`
+                      ).join(', ')}
+                    </div>
+                  )}
+
+                  {!hasAnswer && (
+                    <div style={{ marginBottom: '0.5rem', color: '#ffc107' }}>
+                      ⚠ Not answered
+                    </div>
+                  )}
+
+                  <div style={{ marginBottom: '1rem', color: '#28a745', fontWeight: '600' }}>
+                    ✓ Correct answers: {item.question.dropdowns.map((dd, i) =>
+                      `${dd.id}: ${dd.correctAnswer}`
+                    ).join(', ')}
+                  </div>
+
+                  <div className="staar-explanation">
+                    <div className="staar-explanation-title">Explanation:</div>
+                    <div>{item.question.explanation}</div>
+                  </div>
+                </div>
+              );
+            }
+
+            // Handle standard multiple choice and multi-select questions
             const userAnswers = Array.isArray(item.userAnswer) ? item.userAnswer : (item.userAnswer ? [item.userAnswer] : []);
             const correctAnswers = Array.isArray(item.correctAnswer) ? item.correctAnswer : [item.correctAnswer];
 

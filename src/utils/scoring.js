@@ -263,9 +263,20 @@ export function generateResults(session) {
     })
     .map(q => {
       const isMultiSelect = q.multiSelect || false;
-      const correctAnswer = isMultiSelect
-        ? q.choices.filter(c => c.correct).map(c => c.id)
-        : q.choices.find(c => c.correct)?.id || null;
+      const isDropdown = q.questionType === 'dropdown';
+
+      let correctAnswer;
+      if (isDropdown) {
+        // For dropdown questions, return an object with correct values
+        correctAnswer = q.dropdowns.reduce((acc, dd) => {
+          acc[dd.id] = dd.correctAnswer;
+          return acc;
+        }, {});
+      } else if (isMultiSelect) {
+        correctAnswer = q.choices.filter(c => c.correct).map(c => c.id);
+      } else {
+        correctAnswer = q.choices.find(c => c.correct)?.id || null;
+      }
 
       return {
         question: q,

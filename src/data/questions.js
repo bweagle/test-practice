@@ -1613,6 +1613,42 @@ export const questions = [
     hints: ["Convert the mixed number to a decimal first", "3/10 = 0.3"]
   },
   {
+    id: "staar004",
+    category: "data",
+    difficulty: "medium",
+    questionType: "dropdown",
+    imageDescription: "Cecelia collected data on the amount of time, in minutes, she spent doing homework each day for two weeks. The complete data set is: 10, 10, 10, 12, 14, 14, 14, 16, 16, 18, 18, 18, 18, 20, 20. Cecelia began making a dot plot to display her data, but the dot plot shown is incomplete - it has only 13 dots plotted.",
+    question: "Cecelia still needs to add one dot to [DROPDOWN1] minutes and one dot to [DROPDOWN2] minutes.",
+    dropdowns: [
+      {
+        id: "dropdown1",
+        options: [
+          { value: "10", text: "10" },
+          { value: "12", text: "12" },
+          { value: "14", text: "14" },
+          { value: "16", text: "16" },
+          { value: "18", text: "18" },
+          { value: "20", text: "20" }
+        ],
+        correctAnswer: "10"
+      },
+      {
+        id: "dropdown2",
+        options: [
+          { value: "10", text: "10" },
+          { value: "12", text: "12" },
+          { value: "14", text: "14" },
+          { value: "16", text: "16" },
+          { value: "18", text: "18" },
+          { value: "20", text: "20" }
+        ],
+        correctAnswer: "18"
+      }
+    ],
+    explanation: "Looking at the complete data set, 10 appears 3 times and 18 appears 4 times. If the dot plot only shows 13 dots instead of the complete 15, then we're missing one dot at 10 minutes and one dot at 18 minutes. When we compare the complete frequency distribution (10:3, 12:1, 14:3, 16:2, 18:4, 20:2) to what's shown in the incomplete dot plot (10:2, 12:1, 14:3, 16:2, 18:3, 20:2), we can see that 10 needs one more dot and 18 needs one more dot.",
+    hints: ["Count how many times each value appears in the complete data set", "Compare to what's shown in the dot plot"]
+  },
+  {
     id: "staar005",
     category: "fractions",
     difficulty: "medium",

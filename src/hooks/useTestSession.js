@@ -73,7 +73,7 @@ export function useTestSession(allQuestions) {
   /**
    * Submit an answer for the current question
    * @param {string} questionId - Question ID
-   * @param {string} answerId - Selected answer ID (for multi-select, this toggles the answer)
+   * @param {string|Object} answerId - Selected answer ID (for multi-select, this toggles the answer; for dropdown, this is an object with dropdown IDs as keys)
    */
   const submitAnswer = useCallback((questionId, answerId) => {
     if (!session) return;
@@ -83,11 +83,20 @@ export function useTestSession(allQuestions) {
 
     const timeSpent = getTimeSpent();
     const isMultiSelect = question.multiSelect || false;
+    const isDropdown = question.questionType === 'dropdown';
 
     let selectedAnswer;
     let isCorrect;
 
-    if (isMultiSelect) {
+    if (isDropdown) {
+      // For dropdown questions, answerId is an object like { dropdown1: 'value1', dropdown2: 'value2' }
+      selectedAnswer = answerId;
+
+      // Check if all dropdowns are correct
+      isCorrect = question.dropdowns.every(dropdown => {
+        return selectedAnswer[dropdown.id] === dropdown.correctAnswer;
+      });
+    } else if (isMultiSelect) {
       // For multi-select, toggle the answer in the array
       const currentAnswers = session.answers[questionId]?.selectedAnswer || [];
       const answersArray = Array.isArray(currentAnswers) ? currentAnswers : [];

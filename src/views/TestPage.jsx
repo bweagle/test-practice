@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { QuestionCard } from '../components/QuestionCard';
+import { DropdownQuestion } from '../components/DropdownQuestion';
 import { Button } from '../components/Button';
 import { ProgressBar } from '../components/ProgressBar';
 
@@ -38,6 +39,10 @@ export function TestPage({
     onAnswerSelect(currentQuestion.id, answerId);
   };
 
+  const handleDropdownAnswerSelect = (dropdownAnswers) => {
+    onAnswerSelect(currentQuestion.id, dropdownAnswers);
+  };
+
   return (
     <div className="staar-container">
       <div className="staar-header">
@@ -56,12 +61,21 @@ export function TestPage({
         <ProgressBar percentage={progress} />
       </div>
 
-      <QuestionCard
-        question={currentQuestion}
-        questionNumber={currentQuestionIndex + 1}
-        selectedAnswer={currentAnswer?.selectedAnswer || null}
-        onAnswerSelect={handleAnswerSelect}
-      />
+      {currentQuestion.questionType === 'dropdown' ? (
+        <DropdownQuestion
+          question={currentQuestion}
+          questionNumber={currentQuestionIndex + 1}
+          selectedAnswers={currentAnswer?.selectedAnswer || {}}
+          onAnswerSelect={handleDropdownAnswerSelect}
+        />
+      ) : (
+        <QuestionCard
+          question={currentQuestion}
+          questionNumber={currentQuestionIndex + 1}
+          selectedAnswer={currentAnswer?.selectedAnswer || null}
+          onAnswerSelect={handleAnswerSelect}
+        />
+      )}
 
       <div className="staar-nav-buttons">
         <Button
